@@ -9,7 +9,7 @@
                 <field name="state" position="before">
                     <field name="carrier_id" />
                     <field name="weight" sum="Total Weight"/>
-                    <field name="weight_net" sum="Total Net Weight"/>
+                    <field name="weight_bulk" sum="Total Net Weight"/>
                 </field>
             </field>
         </record>
@@ -22,10 +22,18 @@
                 <field name="partner_id" position="after">
                     <field name="carrier_id" />
                 </field>
-                <group string="Group By" position="inside">
+                
+                <xpath expr="//group" position="inside">
                     <filter string="Carrier" domain="[]"
                         context="{'group_by': 'carrier_id'}" />
-                </group>
+                </xpath>
+                
+                
+                
+                <!-- <group string="Group By" position="inside">
+                    <filter string="Carrier" domain="[]"
+                        context="{'group_by': 'carrier_id'}" />
+                </group> -->
             </field>
         </record>
     </data>
