@@ -28,11 +28,11 @@
                     <field name="show_force_reservation" invisible="1" />
                     <field name="show_unreserve" invisible="1" />
                 </xpath>
-                <xpath expr="//field[@name='workcenter_lines']/form//button[@string='Check Availability']" position="attributes">
+                <xpath expr="//field[@name='workcenter_lines']/form//button[@name='action_assign']" position="attributes">
                     <attribute name="states"></attribute>
                     <attribute name="attrs">{'invisible':[('show_check_availability','=',False)]}</attribute>
                 </xpath>
-                <xpath expr="//field[@name='workcenter_lines']/form//button[@string='Check Availability']" position="after">
+                <xpath expr="//field[@name='workcenter_lines']/form//button[@name='action_assign']" position="after">
                     <button name="button_unreserve" string="Unreserve" type="object"
                             attrs="{'invisible':[('show_unreserve', '=', False)]}"/>
                 </xpath>
